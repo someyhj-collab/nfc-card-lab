@@ -17,7 +17,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: macos-latest
     timeout-minutes: 40
 
     steps:
@@ -26,8 +26,8 @@ jobs:
       - name: 选择 Xcode
         run: |
           set -e
-          sudo xcode-select -s /Applications/Xcode_15.4.app 2>/dev/null \
-            || sudo xcode-select -s /Applications/Xcode.app
+          ls /Applications | grep -i xcode || true
+          sudo xcode-select -s /Applications/Xcode.app 2>/dev/null || true
           xcodebuild -version
           xcodebuild -showsdks | grep -i iphoneos
 
