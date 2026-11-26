@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- 读卡能力：需要付费开发者账号（Near Field Communication Tag Reading） -->
+	<key>com.apple.developer.nfc.readersession.formats</key>
+	<array>
+		<string>NDEF</string>
+		<string>TAG</string>
+	</array>
+
+	<!-- HCE 卡模拟：需单独向 Apple 申请 NFC & SE Platform，默认注释掉。
+	     拿到审批后取消注释，并在 project.yml 里加 OTHER_SWIFT_FLAGS = -DHCE_ENABLED -->
+	<!--
+	<key>com.apple.developer.nfc.hce</key>
+	<true/>
+	<key>com.apple.developer.nfc.hce.iso7816.select-identifiers</key>
+	<array>
+		<string>F0010203040506</string>
+	</array>
+	-->
+</dict>
+</plist>
