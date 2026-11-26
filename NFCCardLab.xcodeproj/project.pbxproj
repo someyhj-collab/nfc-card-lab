@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		806C9A54CA101E471D7E6E14 /* CardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C340F48C02746595CBE4EB11 /* CardStore.swift */; };
+		E7EA4DCB5B4AE41F159B4E3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D28CBE22D2D7987EA7314A /* ContentView.swift */; };
+		2A9F6E28145304EEC746D67B /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF267A956F918A067EBCD46 /* Crypto.swift */; };
+		7A83DF5513E708D75425DB32 /* DESFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EA7445371AE957ABDD8846 /* DESFire.swift */; };
+		054981AA53D34B0B2E268E25 /* Emulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358AC832B6E47AD90A7D50E /* Emulation.swift */; };
+		258D9D5B82CAA1A821EBB764 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1AE0D56A3BE04430B1421F /* Models.swift */; };
+		C9BE65BAEB52B68A4B640838 /* NFCCardLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E55550BAA4B98A618B6001 /* NFCCardLabApp.swift */; };
+		3A193C635DABB93FBA2CBAEE /* NFCReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC30224865E89C3CF452326 /* NFCReader.swift */; };
+		A731FCDE1F0C903B0070EBAE /* PageScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA83DE6D87F69A944F7F07 /* PageScript.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C340F48C02746595CBE4EB11 /* CardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStore.swift; sourceTree = "<group>"; };
+		01D28CBE22D2D7987EA7314A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DAF267A956F918A067EBCD46 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		43EA7445371AE957ABDD8846 /* DESFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DESFire.swift; sourceTree = "<group>"; };
+		F358AC832B6E47AD90A7D50E /* Emulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emulation.swift; sourceTree = "<group>"; };
+		6F1AE0D56A3BE04430B1421F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		22E55550BAA4B98A618B6001 /* NFCCardLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCCardLabApp.swift; sourceTree = "<group>"; };
+		3CC30224865E89C3CF452326 /* NFCReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReader.swift; sourceTree = "<group>"; };
+		50CA83DE6D87F69A944F7F07 /* PageScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageScript.swift; sourceTree = "<group>"; };
+		29139B19CB5E297098230289 /* NFCCardLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCCardLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		019BAB185F97B56993A7087D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		361FF3508AF23F4E0CB329EA = {
+			isa = PBXGroup;
+			children = (
+				8050FF0E4A545BC1CB2EBF68 /* Sources */,
+				31793280A19CDC7880B10A8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8050FF0E4A545BC1CB2EBF68 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C340F48C02746595CBE4EB11 /* CardStore.swift */,
+				01D28CBE22D2D7987EA7314A /* ContentView.swift */,
+				DAF267A956F918A067EBCD46 /* Crypto.swift */,
+				43EA7445371AE957ABDD8846 /* DESFire.swift */,
+				F358AC832B6E47AD90A7D50E /* Emulation.swift */,
+				6F1AE0D56A3BE04430B1421F /* Models.swift */,
+				22E55550BAA4B98A618B6001 /* NFCCardLabApp.swift */,
+				3CC30224865E89C3CF452326 /* NFCReader.swift */,
+				50CA83DE6D87F69A944F7F07 /* PageScript.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		31793280A19CDC7880B10A8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29139B19CB5E297098230289 /* NFCCardLab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E8A3AD980EC179856012B7E /* NFCCardLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7A621F571C1C7F9EAAC4AB0 /* Build configuration list for PBXNativeTarget "NFCCardLab" */;
+			buildPhases = (
+				C2511B36F0F0E810A9E46328 /* Sources */,
+				019BAB185F97B56993A7087D /* Frameworks */,
+				C2112B99FC6905E49DE55430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NFCCardLab;
+			productName = NFCCardLab;
+			productReference = 29139B19CB5E297098230289 /* NFCCardLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0E8A3AD980EC179856012B7E = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 6547E55400B305CFB38A6528 /* Build configuration list for PBXProject "NFCCardLab" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = zh_CN;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				zh_CN,
+				en,
+				Base,
+			);
+			mainGroup = 361FF3508AF23F4E0CB329EA;
+			productRefGroup = 31793280A19CDC7880B10A8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E8A3AD980EC179856012B7E /* NFCCardLab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2112B99FC6905E49DE55430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2511B36F0F0E810A9E46328 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				806C9A54CA101E471D7E6E14 /* CardStore.swift in Sources */,
+				E7EA4DCB5B4AE41F159B4E3E /* ContentView.swift in Sources */,
+				2A9F6E28145304EEC746D67B /* Crypto.swift in Sources */,
+				7A83DF5513E708D75425DB32 /* DESFire.swift in Sources */,
+				054981AA53D34B0B2E268E25 /* Emulation.swift in Sources */,
+				258D9D5B82CAA1A821EBB764 /* Models.swift in Sources */,
+				C9BE65BAEB52B68A4B640838 /* NFCCardLabApp.swift in Sources */,
+				3A193C635DABB93FBA2CBAEE /* NFCReader.swift in Sources */,
+				A731FCDE1F0C903B0070EBAE /* PageScript.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		26FB69EF476AA4F91986D5BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				ENABLE_BITCODE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				COPY_PHASE_STRIP = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		12675666F603A13707CBBF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				ENABLE_BITCODE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				COPY_PHASE_STRIP = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EED4B3EBCF319F7CCEE87B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "TEAMID";
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.nfclab;
+				PRODUCT_NAME = NFCCardLab;
+				INFOPLIST_FILE = Resources/Info.plist;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/NFCCardLab.entitlements;
+				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+			};
+			name = Debug;
+		};
+		43DCE58A7FDA8870F8A209D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "TEAMID";
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.nfclab;
+				PRODUCT_NAME = NFCCardLab;
+				INFOPLIST_FILE = Resources/Info.plist;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/NFCCardLab.entitlements;
+				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6547E55400B305CFB38A6528 /* Build configuration list for PBXProject "NFCCardLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FB69EF476AA4F91986D5BE /* Debug */,
+				12675666F603A13707CBBF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7A621F571C1C7F9EAAC4AB0 /* Build configuration list for PBXNativeTarget "NFCCardLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EED4B3EBCF319F7CCEE87B3 /* Debug */,
+				43DCE58A7FDA8870F8A209D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}
