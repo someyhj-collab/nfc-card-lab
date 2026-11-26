@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh_CN</string>
+	<key>CFBundleDisplayName</key>
+	<string>NFC 卡片实验室</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+
+	<!-- 让「文件」App / Finder 能看到 Documents，方便把 PC 侧生成的卡片 JSON 拖进去 -->
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>16.0</string>
+
+	<!-- ── NFC 读卡（必需）──────────────────────────────────────── -->
+	<key>NFCReaderUsageDescription</key>
+	<string>用于读取 NFC 标签的 UID、NDEF 内容与公开 APDU 数据，仅保存在本机。</string>
+
+	<key>com.apple.developer.nfc.readersession.formats</key>
+	<array>
+		<string>NDEF</string>
+		<string>TAG</string>
+	</array>
+
+	<!-- ISO7816 卡要声明 AID。以下为常见公开 AID，按需增删。
+	     银行卡/身份证的私有 AID 不在其列，选不到就读不到。 -->
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A0000000031010</string>
+		<string>A0000000032010</string>
+		<string>A0000000032020</string>
+		<string>A0000000041010</string>
+		<string>A0000000043060</string>
+		<string>A0000000650101</string>
+		<string>D2760000850101</string>
+		<string>F0010203040506</string>
+		<string>F222222222</string>
+	</array>
+
+	<!-- FeliCa 系统码（交通卡类）。留空数组即可关闭。 -->
+	<key>com.apple.developer.nfc.readersession.felica.systemcodes</key>
+	<array>
+		<string>0003</string>
+		<string>8005</string>
+		<string>8008</string>
+		<string>12FC</string>
+	</array>
+
+	<!-- ── HCE（仅当拿到 NFC & SE Platform entitlement 时启用）──── -->
+	<!--
+	<key>com.apple.developer.nfc.hce.iso7816.select-identifiers</key>
+	<array>
+		<string>F0010203040506</string>
+	</array>
+	-->
+</dict>
+</plist>
