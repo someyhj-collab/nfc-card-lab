@@ -1,0 +1,35 @@
+name: NFCCardLab
+
+options:
+  bundleIdPrefix: com.local.nfclab
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: TEAMID
+    ENABLE_BITCODE: NO
+    ONLY_ACTIVE_ARCH: NO
+    ARCHS: arm64
+    TARGETED_DEVICE_FAMILY: "1"
+
+targets:
+  NFCCardLab:
+    type: application
+    platform: iOS
+    sources:
+      # 只把 Sources 编进 target；Resources 里的 Info.plist 由 INFOPLIST_FILE 引用，
+      # entitlements 由 CODE_SIGN_ENTITLEMENTS 引用，都不能当普通资源打包。
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.local.nfclab
+        PRODUCT_NAME: NFCCardLab
+        INFOPLIST_FILE: Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Entitlements/NFCCardLab.entitlements
+        # 拿到 HCE 审批后取消下面这行注释
+        # OTHER_SWIFT_FLAGS: "-DHCE_ENABLED"
