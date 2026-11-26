@@ -1,0 +1,75 @@
+name: Build IPA
+
+# 推 tag、改代码、或手动触发都能出包
+on:
+  workflow_dispatch:
+    inputs:
+      bundle_id:
+        description: "Bundle ID"
+        default: "com.local.nfclab"
+        required: true
+      team_id:
+        description: "DEVELOPMENT_TEAM（未签名编译时可留空）"
+        default: ""
+        required: false
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 40
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 选择 Xcode
+        run: |
+          set -e
+          sudo xcode-select -s /Applications/Xcode_15.4.app 2>/dev/null \
+            || sudo xcode-select -s /Applications/Xcode.app
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i iphoneos
+
+      - name: 生成 Xcode 工程
+        run: |
+          set -e
+          python3 tools/gen_xcodeproj.py \
+            --team "${{ github.event.inputs.team_id || 'TEAMID' }}" \
+            --bundle-id "${{ github.event.inputs.bundle_id || 'com.local.nfclab' }}"
+
+      - name: 编译（未签名）
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project NFCCardLab.xcodeproj \
+            -scheme NFCCardLab \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build/dd \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build 2>&1 | tee build.log
+
+      - name: 上传编译日志
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
+          retention-days: 7
+
+      - name: 打包成 IPA
+        run: |
+          set -euo pipefail
+          APP="build/dd/Build/Products/Release-iphoneos/NFCCardLab.app"
+          test -d "$APP" || { echo "::error::找不到 $APP"; exit 1; }
+          python3 tools/pack_ipa.py "$APP" "build/NFCCardLab-unsigned.ipa"
+          python3 tools/pack_ipa.py --inspect "build/NFCCardLab-unsigned.ipa"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NFCCardLab-unsigned-ipa
+          path: build/NFCCardLab-unsigned.ipa
+          retention-days: 30
